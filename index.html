@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h2>Password Generator</h2>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h4>Generate a Password</h4>
+      </div>
+      <div class="slideContainer">
+        <label class="slider" for="passLength">Character Numbers</label>
+        <input type="range" class="passLength" min="10" max="64" value="32" id="passLength">
+        <p id="value">`Value: ${value}`</p>
+      </div>
+      <div class="chkboxContainer">
+        <div class="form-check-inline">
+          <label class="chkLower">
+            <input type="checkbox" class="chkLower" id="lower" value="">Lowercase
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="chkUpper">
+            <input type="checkbox" class="chkUpper" id="upper" value="">Uppercase
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="chkNum">
+            <input type="checkbox" class="chkNum" id="num" value="">Numeric
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="chkSpecial">
+            <input type="checkbox" class="chkSpecial" id="spec" value="">Special Characters
+          </label>
+        </div>
+      </div>
+      <br>
+      <form class="formContainer">
+        <label class="textBoxTitle" for="customInput">Custom Phrase</label>
+        <input class='inputFrom' type="text" id="customInput" name="customInput" placeholder="Enter Here...">
+        <button class='submitBtn' type="submit">Enter</button>
+      </form>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
