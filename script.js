@@ -255,6 +255,7 @@ generateBtn.addEventListener("click", () => {
 generateBtn.addEventListener("click", () => {
   newArray.length = 0;
   newPass.length = 0;
+  customWord.length = 0;
   finalPass.length = 0;
   writePassword();
 });
